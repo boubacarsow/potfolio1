@@ -17,3 +17,11 @@ const menuToggle = document.getElementById('navbarSupportedContent')
 navLinks.forEach((l) => {
     l.addEventListener('click', () => { new bootstrap.Collapse(menuToggle).toggle() })
 })
+
+const content = 'data:application/pdf;base64,<base64 PDF content string>';
+  const linkSource = content;
+  const downloadLink = document.createElement('a');
+  const fileName = 'name.pdf';
+  downloadLink.href = linkSource;
+  downloadLink.download = fileName;
+  downloadLink.click();
